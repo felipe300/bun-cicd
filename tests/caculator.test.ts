@@ -1,5 +1,18 @@
-import { expect, test, describe } from "bun:test";
+import { expect, test, describe, it } from "bun:test";
 import { calculator } from "../src/calculator";
+
+const dataset = [
+  [2, 3, 4],
+  [-1, 2, 2],
+];
+
+describe("Testing with dataset", () => {
+  test("sum of %d and %d should be %d", () => {
+    it.each(dataset)("Sum of %d and %d should be %d", (a, b, expected) => {
+      expect(calculator("Sum", a, b)).toBe(expected);
+    });
+  });
+});
 
 describe("arithmetic", () => {
   // --- Sum Tests ---
