@@ -17,5 +17,10 @@ jobs:
         run: npx --yes oxlint@1.0.0 --deny-warnings
       - name: Run tests
         run: bun test --coverage --coverage-reporter=lcov
+      - name: Upload coverage artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: code-coverage-report
+          path: coverage/lcov.info
       - name: JUnit XML report
         run: bun test --reporter=junit --reporter-outfile=./bun.xml
