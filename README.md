@@ -14,4 +14,12 @@ To run:
 bun run dev
 ```
 
-open http://localhost:3000
+Open `http://localhost:3000`
+
+## Technologies
+
+- Bun
+- Hono
+- Git
+- Oxlint
+- JUnit

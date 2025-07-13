@@ -1,7 +1,8 @@
 {
   "name": "bun-cicd",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --hot src/index.ts",
+    "lint": "bunx oxlint@latest"
   },
   "dependencies": {
     "hono": "^4.8.4"
@@ -10,3 +11,4 @@
     "@types/bun": "latest"
   }
 }
+
